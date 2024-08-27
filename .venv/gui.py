@@ -56,13 +56,13 @@ layout = [
     [exit_button]
 ]
 
-window = me.Window("My To-Do App", layout=layout, font=('Helvetica', 13), background_color='black')
+window = me.Window("My To-Do App", layout=layout, font=('Helvetica', 12), background_color='black')
 
 while True:
     event, values = window.read(timeout=1000)  # Update every second
     window["clock"].update(update_clock())
     print(event)
-    print(values)]
+    print(values)
     match event:
         case "Add":
             todos = functions.get_todos()
